@@ -6,4 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SaleUserRepository extends JpaRepository<SaleUserEntity, Long> {
+
+    SaleUserEntity findByUserName(String username);
+
+    SaleUserEntity findByUserId(long userId);
 }

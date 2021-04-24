@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.Set;
 
 @Entity
 @Data
@@ -32,4 +33,8 @@ public class SaleUserEntity implements Serializable {
 
     @Column(name = "user_created")
     private Timestamp userCreated;
+
+    @OneToMany
+    @JoinColumn(name = "user_id", insertable = false, updatable = false)
+    private Set<SaleUserRoleEntity> userRoleSet;
 }

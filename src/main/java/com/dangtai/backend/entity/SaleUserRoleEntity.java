@@ -17,6 +17,7 @@ public class SaleUserRoleEntity implements Serializable {
     @Column(name = "user_id")
     private long userId;
 
-    @Column(name = "role_id")
-    private long roleId;
+    @ManyToOne
+    @JoinColumn(name = "role_id", insertable = false, updatable = false)
+    private SaleRoleEntity saleRoleEntity;
 }
