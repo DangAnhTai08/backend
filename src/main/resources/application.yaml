@@ -16,3 +16,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/db_sales
     username: postgres
     password: 123@123a
+
+service:
+   jwt-secret:
+   jwt-expiration: 60000 # 60 Seconds
